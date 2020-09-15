@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Seeder Copy Links
+// @name         Seeder Copy elements
 // @namespace    http://tampermonkey.net/
 // @version      0.2
-// @description  Copy direct links
+// @description  Copy direct elements
 // @author       Neokyuubi
 // @match        https://www.seedr.cc/*
 // @grant        GM_setClipboard
@@ -11,30 +11,30 @@
 
 (function() {
     'use strict';
-    var listo = [];
-    var textoo = "";
+    var elements = [];
+    var links = "";
     var sleep = (delay) => new Promise((resolve)=>setTimeout(resolve, delay));
 
-    async function gogo()
+    async function seedr()
     {
         try
         {
             $("span .fa.fa-copy").each(function(index)
             {
-                listo.push($(this));
+                elements.push($(this));
             });
 
-            for (let i = 0; i < listo.length; i++)
+            for (let i = 0; i < elements.length; i++)
             {
                 await sleep(250);
-                listo[i].parent().parent().parent().parent().contextmenu();
+                elements[i].parent().parent().parent().parent().contextmenu();
                 await sleep(250);
                 let text = $("#clipboard-div").attr("data-clipboard");
                 //  filter here if mp4 or mkv
-                textoo += (i<listo.length -1) ? text + "\n" : text;
+                links += (i<elements.length -1) ? text + "\n" : text;
             }
-            //console.log(textoo);
-            GM_setClipboard(textoo);
+            //console.log(links);
+            GM_setClipboard(links);
         }
         catch(err)
         {
@@ -49,7 +49,7 @@
             event.preventDefault();
             setTimeout(function()
             {
-               gogo();
+               seedr();
             }, 100);
         }
     });
