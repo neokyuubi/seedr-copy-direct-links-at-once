@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Seeder Copy Links
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  Copy direct Links inside a folder
 // @author       Neokyuubi
 // @match        https://www.seedr.cc/*
