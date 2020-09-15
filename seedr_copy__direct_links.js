@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Seeder Copy elements
+// @name         Seeder Copy Links
 // @namespace    http://tampermonkey.net/
-// @version      0.2
-// @description  Copy direct elements
+// @version      0.3
+// @description  Copy direct Links inside a folder
 // @author       Neokyuubi
 // @match        https://www.seedr.cc/*
 // @grant        GM_setClipboard
