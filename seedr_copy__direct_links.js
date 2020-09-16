@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Seeder Copy Links.
+// @name         Seedr Copy Links.
 // @namespace    https://github.com/Neokyuubi/seedr-copy-direct-links-at-once
 // @supportURL   https://github.com/Neokyuubi/seedr-copy-direct-links-at-once/issues
 // @version      0.9
