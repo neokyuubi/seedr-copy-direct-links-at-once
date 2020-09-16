@@ -2,29 +2,32 @@
 // @name         Seedr Copy Links.
 // @namespace    https://github.com/Neokyuubi/seedr-copy-direct-links-at-once
 // @supportURL   https://github.com/Neokyuubi/seedr-copy-direct-links-at-once/issues
-// @version      0.9
+// @updateURL    https://raw.githubusercontent.com/Neokyuubi/seedr-copy-direct-links-at-once/master/seedr_copy__direct_links.js
+// @downloadURL  https://raw.githubusercontent.com/Neokyuubi/seedr-copy-direct-links-at-once/master/seedr_copy__direct_links.js
+// @require      https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js
+// @version      1.0
 // @description  Copy direct Links inside a folder.
 // @author       Neokyuubi
 // @match        https://www.seedr.cc/*
 // @grant        GM_setClipboard
 // ==/UserScript==
-/* globals jQuery, $, waitForKeyElements */
+/* globals jQuery, $, waitForKeyElements, swal */
 
 (function() {
     'use strict';
-    var elements = [];
-    var links = "";
-    var sleep = (delay) => new Promise((resolve)=>setTimeout(resolve, delay));
+    let elements = [];
+    let links = "";
+    let sleep = (delay) => new Promise((resolve)=>setTimeout(resolve, delay));
 
     async function seedr()
     {
         try
         {
-            $("span .fa.fa-copy").each(function(index)
+            jQuery.unique($("span .fa.fa-copy")).each(function(index)
             {
                 elements.push($(this));
             });
-
+            console.log(elements);
             for (let i = 0; i < elements.length; i++)
             {
                 await sleep(250);
@@ -36,6 +39,7 @@
             }
             //console.log(links);
             GM_setClipboard(links);
+            swal("Links are copied successfully!", elements.length + " links are copied", "success");
         }
         catch(err)
         {
@@ -50,6 +54,8 @@
             event.preventDefault();
             setTimeout(function()
             {
+               elements = [];
+               links = "";
                seedr();
             }, 100);
         }
