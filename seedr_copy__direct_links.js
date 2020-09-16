@@ -2,7 +2,7 @@
 // @name         Seeder Copy Links.
 // @namespace    https://github.com/Neokyuubi/seedr-copy-direct-links-at-once
 // @supportURL   https://github.com/Neokyuubi/seedr-copy-direct-links-at-once/issues
-// @version      0.8
+// @version      0.9
 // @description  Copy direct Links inside a folder.
 // @author       Neokyuubi
 // @match        https://www.seedr.cc/*
