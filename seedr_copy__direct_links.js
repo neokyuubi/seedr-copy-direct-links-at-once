@@ -5,7 +5,7 @@
 // @updateURL    https://raw.githubusercontent.com/Neokyuubi/seedr-copy-direct-links-at-once/master/seedr_copy__direct_links.js
 // @downloadURL  https://raw.githubusercontent.com/Neokyuubi/seedr-copy-direct-links-at-once/master/seedr_copy__direct_links.js
 // @require      https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js
-// @version      1.1
+// @version      1.2
 // @description  Copy direct Links inside a Folder.
 // @author       Neokyuubi
 // @match        https://www.seedr.cc/*
@@ -37,7 +37,7 @@
                 //  filter here if mp4 or mkv
                 links += (i<elements.length -1) ? text + "\n" : text;
             }
-            //console.log(links);
+            console.log(links);
             GM_setClipboard(links);
             swal("Links are copied successfully!", elements.length + " links are copied", "success");
         }
