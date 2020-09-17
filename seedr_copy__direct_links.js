@@ -5,8 +5,8 @@
 // @updateURL    https://raw.githubusercontent.com/Neokyuubi/seedr-copy-direct-links-at-once/master/seedr_copy__direct_links.js
 // @downloadURL  https://raw.githubusercontent.com/Neokyuubi/seedr-copy-direct-links-at-once/master/seedr_copy__direct_links.js
 // @require      https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js
-// @version      1.0
-// @description  Copy direct Links inside a folder.
+// @version      1.1
+// @description  Copy direct Links inside a Folder.
 // @author       Neokyuubi
 // @match        https://www.seedr.cc/*
 // @grant        GM_setClipboard
