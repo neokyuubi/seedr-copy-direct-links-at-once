@@ -1,4 +1,4 @@
-# Seedr.cc Copy Direct Links At Once
+# Seedr.cc Copy Direct Links At Once (Tampermonkey)
 Copy direct links of the files inside a folder.
 
 This script is usefull if you have a seedr.cc folder and want to copy its direct links at once without packaging them all as zip.
